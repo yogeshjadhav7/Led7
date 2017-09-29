@@ -5,9 +5,9 @@ import tensorflow as tf
 
 input_file_path = "Train-LED.csv"
 params = ModelParameters(number_of_hidden_layers=1,
-                         number_of_input_neurons=7,
+                         number_of_input_neurons=28,
                          number_of_output_neurons=10,
-                         number_of_hidden_layer_neurons=8,
+                         number_of_hidden_layer_neurons=28,
                          epoch_size=10,
                          learning_rate=0.0015)
 
