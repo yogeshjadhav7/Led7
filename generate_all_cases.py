@@ -17,7 +17,6 @@ class Generate(object):
 
 
     def create_extra_features(self, state):
-        return state
         length = len(state)
         for i in range(length):
             if state[i] == ',':
