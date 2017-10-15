@@ -8,7 +8,8 @@ output_file_path = "all_cases_prediction.csv"
 params = ModelParameters(number_of_hidden_layers=1,
                          number_of_input_neurons=28,
                          number_of_output_neurons=10,
-                         number_of_hidden_layer_neurons=28)
+                         number_of_hidden_layer_neurons=28,
+                         learning_rate=0.0001)
 
 project_name = "LED-7"
 manager = Manager(project_name, params, input_file_path)
