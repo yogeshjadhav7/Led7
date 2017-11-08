@@ -14,12 +14,14 @@ manager = Manager(project_name, params, input_file_path)
 manager.build_simple_nn()
 manager.initialize_trainer()
 
-cost_gloabal = 100
+cost_gloabal = 100.0
 threshold = 1
 
 while True:
     features, labels = manager.get_training_data()
     cost, before_accuracy, after_accuracy = manager.train_simple_nn(features, labels)
-    if before_accuracy == 100:
+    if before_accuracy == 100 or (cost_gloabal - cost) < 0.05:
         break
+
+    cost_gloabal = cost
 
